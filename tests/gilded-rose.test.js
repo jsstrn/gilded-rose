@@ -49,8 +49,4 @@ describe("Gilded Rose", () => {
   it.todo(
     "should decrease the quality of 'conjured' twice as fast as normal items before expiry"
   );
-
-  it.todo(
-    "should decrease the quality of 'conjured' twice as fast as normal items after expiry"
-  );
 });
