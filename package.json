@@ -1,28 +1,32 @@
 {
   "name": "gilded-rose",
+  "license": "MIT",
   "version": "1.0.0",
-  "description": "gilded rose kata in javascript",
-  "scripts": {
-    "test": "jest",
-    "test:watch": "jest --watch"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/emilybache/GildedRose-Refactoring-Kata.git"
-  },
+  "description": "Gilded Rose refactoring kata in JavaScript",
   "keywords": [
     "kata",
     "refactor",
     "gilded-rose"
   ],
-  "license": "MIT",
-  "private": true,
-  "bugs": {
-    "url": "https://github.com/emilybache/GildedRose-Refactoring-Kata/issues"
+  "scripts": {
+    "lint": "eslint **/*.js",
+    "test": "jest",
+    "test:watch": "jest --watch",
+    "test:all": "npm run lint && npm test"
   },
-  "homepage": "https://github.com/emilybache/GildedRose-Refactoring-Kata#readme",
-  "devDependencies": {},
-  "dependencies": {
-    "jest": "^23.6.0"
+  "husky": {
+    "hooks": {
+      "pre-push": "npm run test:all"
+    }
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "eslint": "^5.16.0",
+    "eslint-config-prettier": "^4.2.0",
+    "eslint-plugin-jest": "^22.5.1",
+    "eslint-plugin-prettier": "^3.0.1",
+    "husky": "^2.1.0",
+    "jest": "^24.7.1",
+    "prettier": "^1.17.0"
   }
 }
