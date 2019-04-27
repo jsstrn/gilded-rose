@@ -1,4 +1,4 @@
-const { Shop, Item } = require("../src/gilded-rose");
+const { Shop, Item } = require("../src");
 
 function itemAfterUpdate(itemName, daysTillSellByDate, quality) {
   const items = [new Item(itemName, daysTillSellByDate, quality)];
