@@ -1,10 +1,45 @@
 const { AGED_BRIE, SULFURAS, BACKSTAGE_PASS } = require("./constants");
 
+const Sulfuras = function() {
+  this.update = () => {};
+};
+
+const AgedBrie = function() {
+  this.update = () => {};
+};
+
+const BackstagePass = function() {
+  this.update = () => {};
+};
+
+const RegularItem = function() {
+  this.update = () => {};
+};
+
 class Item {
   constructor(name, sellIn, quality) {
     this.name = name;
     this.sellIn = sellIn;
     this.quality = quality;
+    this.type = "";
+    this.setType(name);
+  }
+
+  setType(type) {
+    switch (type) {
+      case SULFURAS:
+        this.type = new Sulfuras();
+        break;
+      case AGED_BRIE:
+        this.type = new AgedBrie();
+        break;
+      case BACKSTAGE_PASS:
+        this.type = new BackstagePass();
+        break;
+      default:
+        this.type = new RegularItem();
+        break;
+    }
   }
 
   update() {
