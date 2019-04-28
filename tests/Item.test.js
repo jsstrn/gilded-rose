@@ -1,13 +1,12 @@
-const { Shop, Item } = require("../src");
+const { Item } = require("../src");
 
 function itemAfterUpdate(itemName, daysTillSellByDate, quality) {
-  const items = [new Item(itemName, daysTillSellByDate, quality)];
-  const shop = new Shop(items);
-  const item = shop.updateQuality()[0];
+  const item = new Item(itemName, daysTillSellByDate, quality);
+  item.update();
   return item;
 }
 
-describe("Gilded Rose", () => {
+describe("Item", () => {
   const itemName = "Regular Item";
 
   describe("For regular items", () => {
