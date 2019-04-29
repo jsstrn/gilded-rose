@@ -50,7 +50,7 @@ describe("Item", () => {
       const quality = 40;
       const item = itemAfterUpdate(SULFURAS, daysTillSellByDate, quality);
 
-      expect(item.sellIn).toBe(5);
+      expect(item.daysRemaining).toBe(5);
     });
 
     it("should not alter quality", () => {

@@ -14,19 +14,19 @@ describe("Shop", () => {
     shop.updateQuality();
 
     expect(items[0].name).toBe("Regular Item");
-    expect(items[0].sellIn).toBe(-1);
+    expect(items[0].daysRemaining).toBe(-1);
     expect(items[0].quality).toBe(0);
 
     expect(items[1].name).toBe(AGED_BRIE);
-    expect(items[1].sellIn).toBe(-1);
+    expect(items[1].daysRemaining).toBe(-1);
     expect(items[1].quality).toBe(2);
 
     expect(items[2].name).toBe(SULFURAS);
-    expect(items[2].sellIn).toBe(0);
+    expect(items[2].daysRemaining).toBe(0);
     expect(items[2].quality).toBe(0);
 
     expect(items[3].name).toBe(BACKSTAGE_PASS);
-    expect(items[3].sellIn).toBe(-1);
+    expect(items[3].daysRemaining).toBe(-1);
     expect(items[3].quality).toBe(0);
   });
 });
