@@ -28,7 +28,7 @@ class Item {
   }
 
   update() {
-    if (this.name === SULFURAS) {
+    if (this.name === SULFURAS || this.name === AGED_BRIE) {
       this.type.update();
       return;
     }

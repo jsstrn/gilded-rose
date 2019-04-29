@@ -32,7 +32,7 @@ describe("Item", () => {
       const quality = 0;
       const item = itemAfterUpdate(AGED_BRIE, daysTillSellByDate, quality);
 
-      expect(item.quality).toBe(1);
+      expect(item.type.quality).toBe(1);
     });
 
     it("should not increase quality above 50", () => {
@@ -40,7 +40,7 @@ describe("Item", () => {
       const quality = 50;
       const item = itemAfterUpdate(AGED_BRIE, daysTillSellByDate, quality);
 
-      expect(item.quality).toBe(50);
+      expect(item.type.quality).toBe(50);
     });
   });
 

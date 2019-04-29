@@ -17,9 +17,9 @@ describe("Shop", () => {
     expect(items[0].daysRemaining).toBe(-1);
     expect(items[0].quality).toBe(0);
 
-    expect(items[1].name).toBe(AGED_BRIE);
-    expect(items[1].daysRemaining).toBe(-1);
-    expect(items[1].quality).toBe(2);
+    expect(items[1].type.name).toBe(AGED_BRIE);
+    expect(items[1].type.daysRemaining).toBe(-1);
+    expect(items[1].type.quality).toBe(1);
 
     expect(items[2].name).toBe(SULFURAS);
     expect(items[2].daysRemaining).toBe(0);

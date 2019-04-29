@@ -5,7 +5,13 @@ const AgedBrie = function(daysRemaining, quality) {
   this.daysRemaining = daysRemaining;
   this.quality = quality;
 
-  this.update = () => {};
+  this.update = () => {
+    this.daysRemaining = this.daysRemaining - 1;
+
+    if (this.quality < 50) {
+      this.quality = this.quality + 1;
+    }
+  };
 };
 
 module.exports = AgedBrie;
