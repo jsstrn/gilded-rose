@@ -19,16 +19,20 @@ class Item {
         this.type = new AgedBrie(this.daysRemaining, this.quality);
         break;
       case BACKSTAGE_PASS:
-        this.type = new BackstagePass();
+        this.type = new BackstagePass(this.daysRemaining, this.quality);
         break;
       default:
-        this.type = new RegularItem();
+        this.type = new RegularItem(this.daysRemaining, this.quality);
         break;
     }
   }
 
   update() {
-    if (this.name === SULFURAS || this.name === AGED_BRIE) {
+    if (
+      this.name === SULFURAS ||
+      this.name === AGED_BRIE ||
+      this.name === BACKSTAGE_PASS
+    ) {
       this.type.update();
       return;
     }

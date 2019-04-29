@@ -68,7 +68,7 @@ describe("Item", () => {
       const quality = 20;
       const item = itemAfterUpdate(BACKSTAGE_PASS, daysTillSellByDate, quality);
 
-      expect(item.quality).toBe(21);
+      expect(item.type.quality).toBe(21);
     });
 
     it("increases quality by 2 when sell by date is 10 days", () => {
@@ -76,7 +76,7 @@ describe("Item", () => {
       const quality = 20;
       const item = itemAfterUpdate(BACKSTAGE_PASS, daysTillSellByDate, quality);
 
-      expect(item.quality).toBe(22);
+      expect(item.type.quality).toBe(22);
     });
 
     it("increases quality by 3 when sell by date is 5 days", () => {
@@ -84,7 +84,7 @@ describe("Item", () => {
       const quality = 20;
       const item = itemAfterUpdate(BACKSTAGE_PASS, daysTillSellByDate, quality);
 
-      expect(item.quality).toBe(23);
+      expect(item.type.quality).toBe(23);
     });
 
     it("decreases the quality to 0 when sell by date is 0 days", () => {
@@ -92,7 +92,7 @@ describe("Item", () => {
       const quality = 20;
       const item = itemAfterUpdate(BACKSTAGE_PASS, daysTillSellByDate, quality);
 
-      expect(item.quality).toBe(0);
+      expect(item.type.quality).toBe(0);
     });
   });
 

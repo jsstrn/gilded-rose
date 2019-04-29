@@ -25,8 +25,8 @@ describe("Shop", () => {
     expect(items[2].daysRemaining).toBe(0);
     expect(items[2].quality).toBe(0);
 
-    expect(items[3].name).toBe(BACKSTAGE_PASS);
-    expect(items[3].daysRemaining).toBe(-1);
-    expect(items[3].quality).toBe(0);
+    expect(items[3].type.name).toBe(BACKSTAGE_PASS);
+    expect(items[3].type.daysRemaining).toBe(-1);
+    expect(items[3].type.quality).toBe(0);
   });
 });
