@@ -13,17 +13,17 @@ describe("Shop", () => {
     const shop = new Shop(items);
     shop.updateQuality();
 
-    expect(items[0].name).toBe("Regular Item");
-    expect(items[0].daysRemaining).toBe(-1);
-    expect(items[0].quality).toBe(0);
+    expect(items[0].type.name).toBe("Regular Item");
+    expect(items[0].type.daysRemaining).toBe(-1);
+    expect(items[0].type.quality).toBe(0);
 
     expect(items[1].type.name).toBe(AGED_BRIE);
     expect(items[1].type.daysRemaining).toBe(-1);
     expect(items[1].type.quality).toBe(1);
 
-    expect(items[2].name).toBe(SULFURAS);
-    expect(items[2].daysRemaining).toBe(0);
-    expect(items[2].quality).toBe(0);
+    expect(items[2].type.name).toBe(SULFURAS);
+    expect(items[2].type.daysRemaining).toBe(0);
+    expect(items[2].type.quality).toBe(0);
 
     expect(items[3].type.name).toBe(BACKSTAGE_PASS);
     expect(items[3].type.daysRemaining).toBe(-1);

@@ -14,7 +14,7 @@ describe("Item", () => {
       const quality = 5;
       const item = itemAfterUpdate("Regular Item", daysTillSellByDate, quality);
 
-      expect(item.quality).toBe(3);
+      expect(item.type.quality).toBe(3);
     });
 
     it("should not degrade quality to less than 0", () => {
@@ -22,7 +22,7 @@ describe("Item", () => {
       const quality = 0;
       const item = itemAfterUpdate("Regular Item", daysTillSellByDate, quality);
 
-      expect(item.quality).toBe(0);
+      expect(item.type.quality).toBe(0);
     });
   });
 
