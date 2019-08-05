@@ -1,6 +1,6 @@
 # Gilded Rose
 
-This is my working solution to the Gilded Rose refactoring kata exercise.
+This is my solution to the Gilded Rose refactoring kata exercise.
 
 ## Getting started
 
@@ -8,6 +8,12 @@ Install dependencies
 
 ```
 npm install
+```
+
+Run linter
+
+```
+npm run lint
 ```
 
 Run unit tests
@@ -20,6 +26,24 @@ Run unit tests in watch mode
 
 ```
 npm run test:watch
+```
+
+Run both linter and unit tests
+
+```
+npm run test:all
+```
+
+Run test coverage
+
+```
+npm run test:coverage
+```
+
+Open coverage report
+
+```
+npm run test:report
 ```
 
 ## Requirements
