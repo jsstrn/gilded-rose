@@ -2,6 +2,11 @@ const { Shop, Item } = require("../src");
 const { AGED_BRIE, SULFURAS, BACKSTAGE_PASS } = require("../src/constants");
 
 describe("Shop", () => {
+  it("creates an empty list of items when no items are provided", () => {
+    const shop = new Shop();
+    expect(shop.items).toEqual([]);
+  });
+
   it("updates items correctly", () => {
     const items = [
       new Item("Regular Item", 0, 0),
