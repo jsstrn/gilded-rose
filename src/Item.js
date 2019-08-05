@@ -6,7 +6,7 @@ const Item = function(type, daysRemaining, quality) {
     case SULFURAS:
       return new Sulfuras({ daysRemaining, quality });
     case AGED_BRIE:
-      return new AgedBrie(daysRemaining, quality);
+      return new AgedBrie({ daysRemaining, quality });
     case BACKSTAGE_PASS:
       return new BackstagePass(daysRemaining, quality);
     default:
