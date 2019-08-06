@@ -1,6 +1,6 @@
 const { BACKSTAGE_PASS } = require("../constants");
 
-const BackstagePass = function(daysRemaining, quality) {
+const BackstagePass = function({ daysRemaining, quality }) {
   this.name = BACKSTAGE_PASS;
   this.daysRemaining = daysRemaining;
   this.quality = quality;

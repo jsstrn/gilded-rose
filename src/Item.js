@@ -8,7 +8,7 @@ const Item = function(type, daysRemaining, quality) {
     case AGED_BRIE:
       return new AgedBrie({ daysRemaining, quality });
     case BACKSTAGE_PASS:
-      return new BackstagePass(daysRemaining, quality);
+      return new BackstagePass({ daysRemaining, quality });
     default:
       return new RegularItem(daysRemaining, quality, type);
   }
